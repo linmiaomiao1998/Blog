@@ -8,7 +8,7 @@
           v-for="(t, index) in titles"
           :ref="
             (el) => {
-              if (el) navItems[index] = el;
+              if ( t === selected ) selectedItems = el;
             }
           "
           @click="select(t)"
@@ -41,18 +41,15 @@
       },
     },
     setup(props, context) {
-      const navItems = ref<HTMLDivElement[]>([]);
+      const selectedItems = ref<HTMLDivElement>(null);
       const indicator = ref<HTMLDivElement>(null);
       const container = ref<HTMLDivElement>(null);
       const x = () => {
-        const divs = navItems.value;
-        const result = divs.filter((div) =>
-          div.classList.contains("selected")
-        )[0];
-        const { width } = result.getBoundingClientRect();
+        
+        const { width } = selectedItems.value.getBoundingClientRect();
         indicator.value.style.width = width + "px";
         const { left: left1 } = container.value.getBoundingClientRect();
-        const { left: left2 } = result.getBoundingClientRect();
+        const { left: left2 } = selectedItems.value.getBoundingClientRect();
         const left = left2 - left1;
         indicator.value.style.left = left + "px";
       };
@@ -80,7 +77,7 @@
         defaults,
         titles,
         select,
-        navItems,
+        selectedItems,
         indicator,
         container
       };
