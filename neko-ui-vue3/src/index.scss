@@ -11,7 +11,7 @@ a {
   text-decoration: none;
   color: inherit;
   &:hover {
-    border-bottom: 1px solid;
+    text-decoration: underline;
     cursor: pointer;
   }
   h1,h2,h3,h4,h5,h6{
@@ -19,7 +19,15 @@ a {
   }
 }
 body {
+  line-height: 1.5;
+  color:#6A3F40;
   font-size: 16px;
   // 引入了字体库 https://github.com/zenozeng/fonts.css/
   font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 } 
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
