@@ -55,6 +55,7 @@
 </script>
 
 <style lang="scss" scoped>
+
   .router-link-active {
     margin: 0;
     font-family: helvetica, sans-serif;
