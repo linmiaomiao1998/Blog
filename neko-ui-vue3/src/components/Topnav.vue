@@ -1,20 +1,30 @@
 <template>
   <div class="topnav">
     <div class="logo">
-    <svg class="icon" >
-    <use xlink:href="#icon-jumao"></use>
-</svg></div>
+      <svg class="icon">
+        <use xlink:href="#icon-jumao"></use>
+      </svg>
+    </div>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li>
+        <router-link to="/doc">文档</router-link>
+      </li>
     </ul>
-    <span class="toggleAside" @click="toggleMenu"></span>
+    <svg v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleMenu">
+      <use xlink:href="#icon-menu"></use>
+    </svg>
   </div>
 </template>
 
 <script lang="ts">
   import { inject, Ref } from "vue";
   export default {
+    props: {
+      toggleMenuButtonVisible: {
+        type: Boolean,
+        default: true,
+      },
+    },
     setup() {
       const asideVisible = inject<Ref<boolean>>("asideVisible");
       const toggleMenu = () => {
@@ -27,24 +37,28 @@
 
 <style lang="scss" scope>
   .topnav {
-  background: rgb(186,215,223);
-background: linear-gradient(180deg, rgba(186,215,223,1) 15%,  rgba(186,215,223,1) 100%);
+    z-index: 10;
+    background: rgb(186, 215, 223);
+    background: linear-gradient(
+      180deg,
+      rgba(186, 215, 223, 1) 15%,
+      rgba(186, 215, 223, 1) 100%
+    );
     display: flex;
     padding: 16px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
     justify-content: center;
     align-items: center;
     > .logo {
       max-width: 6em;
       margin-right: auto;
       > svg {
-          width: 32px;
-          height: 32px;
-        }
+        width: 32px;
+        height: 32px;
+      }
     }
     > .menu {
       display: flex;
@@ -55,7 +69,7 @@ background: linear-gradient(180deg, rgba(186,215,223,1) 15%,  rgba(186,215,223,1
       }
     }
     > .toggleAside {
-      display: inline-block;
+      display: none;
       width: 24px;
       height: 24px;
       background: transparent;
@@ -73,9 +87,9 @@ background: linear-gradient(180deg, rgba(186,215,223,1) 15%,  rgba(186,215,223,1
       }
       > .toggleAside {
         display: inline-block;
-        background: red;
+        background: rgb(186, 215, 223);
+        color: #6A3F40;
       }
-     
     }
   }
 </style>
