@@ -37,7 +37,7 @@
 
 <style lang="scss" scope>
   .topnav {
-    z-index: 10;
+    z-index: 20;
     background: rgb(186, 215, 223);
     background: linear-gradient(
       180deg,
