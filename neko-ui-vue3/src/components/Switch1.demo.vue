@@ -10,6 +10,7 @@ import Switch from '../lib/Switch.vue'
 import {
   ref
 } from 'vue'
+import Demo from './Demo.vue'
 export default {
   components: {
     Switch,
