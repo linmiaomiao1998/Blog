@@ -1,6 +1,5 @@
 <template>
   <div>
-    Tabs组件
     <div class="neko-tabs">
       <div class="neko-tabs-nav" ref="container">
         <div
