@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import Dialog from '../lib/Dialog.vue'
-import Button from '../lib/Button.vue'
+import Button from './Button.vue'
 import {
   ref
 } from 'vue'

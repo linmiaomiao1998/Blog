@@ -66,7 +66,7 @@
   }
   th,
   td {
-    border: 1px #bdbabd solid;
+    border-bottom: 1px #bdbabd solid;
     text-align: left;
     font-size: 16px;
     line-height: 30px;
