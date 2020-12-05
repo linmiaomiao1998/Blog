@@ -53,10 +53,11 @@
         indicator.value.style.left = left + "px";
       };
       onMounted(x);
-      onUpdated(x)
+      onUpdated(x);
+      
       const defaults = context.slots.default();
       defaults.forEach((tag) => {
-        if (tag.type !== Tab) {
+        if (tag.type!== Tab) {
           throw new Error("Tab组件必须是tab");
         }
       });

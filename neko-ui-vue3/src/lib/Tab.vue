@@ -7,7 +7,7 @@
 
 <script lang="ts">
 export default {
-
+name: 'NekoTab'
 }
 </script>
 

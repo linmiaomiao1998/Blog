@@ -4,7 +4,7 @@
       <Topnav />
       <div class="banner">
         <h1>Neko UI</h1>
-        <h2>一个随意的UI框架</h2>
+        <h2>一个认真的UI框架</h2>
         <p class="action">
           <a href=" ">Github</a>
           <router-link to="/doc">开始</router-link>
