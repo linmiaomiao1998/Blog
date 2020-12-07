@@ -1,7 +1,6 @@
 <template>
   <div class="tags">
     <div class="new">
-    <textarea value={this.state.value} onChange={this.handleChange} />
       <button @click="createTag">新增标签</button>
     </div>
     <ul div class="current">
@@ -19,7 +18,6 @@
 </template>
 
 <script lang="ts">
-
   import Vue from "vue";
   import { Component, Prop } from "vue-property-decorator";
   import {mixins} from 'vue-class-component';

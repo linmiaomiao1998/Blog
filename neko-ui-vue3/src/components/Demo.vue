@@ -22,8 +22,7 @@
   const Prism = (window as any).Prism;
   export default {
     components: {
-      Button,
-    },
+      Button,},
     props: {
       component: Object,
     },
