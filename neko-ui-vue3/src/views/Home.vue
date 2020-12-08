@@ -6,7 +6,7 @@
         <h1>Neko UI</h1>
         <h2>一个认真的UI框架</h2>
         <p class="action">
-          <a href=" ">Github</a>
+          <a href="https://github.com/linmiaomiao1998/Blog/tree/master/neko-ui-vue3">Github</a>
           <router-link to="/doc">开始</router-link>
         </p>
       </div>
