@@ -1,4 +1,5 @@
 # 开始使用
+
 请先[安装](#/doc/install)本组件库。
 
 然后在你的代码中写入下面的代码
@@ -8,6 +9,7 @@ import {Button, Tabs, Switch, Dialog} from "neko-ui-vue3"
 ```
 
 就可以使用我提供的组件了。
+（注：本文档中所有代码的引用路径均为相对路径，请使用者按照自己的目录自行更改）
 
 ## Vue 单文件组件
 
@@ -20,7 +22,7 @@ import {Button, Tabs, Switch, Dialog} from "neko-ui-vue3"
   </div>
 </template>
 <script>
-import {Button, Tabs, Switch, Dialog} from "neko-ui-vue3"
+import {Button, Tabs, Tab, Switch, Dialog, openDialog} from "neko-ui-vue3"
 export default {
   components: {Button}
 }

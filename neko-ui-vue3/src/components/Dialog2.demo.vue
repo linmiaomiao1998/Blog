@@ -8,14 +8,14 @@
 </template>
 
 <script lang="ts">
-import Button from './Button.vue'
+import {
+  Button,
+  openDialog
+} from "../lib/index";
 import {
   ref,
   h
 } from 'vue'
-import {
-  openDialog
-} from '../lib/openDialog'
 export default {
   components: {
     Button

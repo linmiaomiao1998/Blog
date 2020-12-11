@@ -5,8 +5,16 @@
   </button>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup="props">
   import { computed } from "vue";
+  declare const props: {
+    theme?: "button" | "text" | "link";
+    size?: "normal" | "big" | "small";
+    level?: "normal" | "main" | "danger";
+    other?: "gather"| "spread"|"roll"|"open";
+    disabled: boolean;
+    loading: boolean;
+  };
   export default {
     props: {
       theme: {
@@ -34,9 +42,9 @@
         default: "normal",
       },
     },
-    setup(props) {
+  };
       const { theme, size, level, other } = props;
-      const classes = computed(() => {
+      export const classes = computed(() => {
         return {
           [`neko-theme-${theme}`]: theme,
           [`neko-size-${size}`]: size,
@@ -44,9 +52,6 @@
           [`neko-other-${other}`]: other,
         };
       });
-      return { classes };
-    },
-  };
 </script>
 
 <style lang="scss">
@@ -58,7 +63,7 @@
   $grey: grey;
   $green: #2ecc71;
   $red: #e74c3c;
-  $yellow: #F9A102;
+  $yellow: #f9a102;
   $purple: #8e44ad;
   $turquoise: #1abc9c;
   .neko-button {
@@ -130,10 +135,10 @@
         }
       }
       &.neko-level-danger {
-        font-weight:bold;
+        font-weight: bold;
         background: black;
         border-color: black;
-        color:$yellow;
+        color: $yellow;
         &:hover,
         &:focus {
           background: darken($yellow, 10%);
@@ -143,7 +148,7 @@
     }
     &.neko-theme-link {
       &.neko-level-danger {
-        font-weight:bold;
+        font-weight: bold;
         color: $yellow;
         &:hover,
         &:focus {
@@ -160,7 +165,7 @@
         }
       }
       &.neko-level-danger {
-        font-weight:bold;
+        font-weight: bold;
         color: $yellow;
         &:hover,
         &:focus {
