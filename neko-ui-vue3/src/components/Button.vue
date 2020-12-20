@@ -5,16 +5,8 @@
   </button>
 </template>
 
-<script lang="ts" setup="props">
+<script lang="ts">
   import { computed } from "vue";
-  declare const props: {
-    theme?: "button" | "text" | "link";
-    size?: "normal" | "big" | "small";
-    level?: "normal" | "main" | "danger";
-    other?: "gather"| "spread"|"roll"|"open";
-    disabled: boolean;
-    loading: boolean;
-  };
   export default {
     props: {
       theme: {
@@ -42,9 +34,9 @@
         default: "normal",
       },
     },
-  };
-      const { theme, size, level, other } = props;
-      export const classes = computed(() => {
+    setup(props) {
+     const { theme, size, level, other } = props;
+     const classes = computed(() => {
         return {
           [`neko-theme-${theme}`]: theme,
           [`neko-size-${size}`]: size,
@@ -52,6 +44,9 @@
           [`neko-other-${other}`]: other,
         };
       });
+      return {classes};
+    },
+  };
 </script>
 
 <style lang="scss">
