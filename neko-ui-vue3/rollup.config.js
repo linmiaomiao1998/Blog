@@ -6,15 +6,20 @@ import { terser } from "rollup-plugin-terser"
 
 export default {
   input: 'src/lib/index.ts',
-  output: {
+  output: [{
     globals: {
       vue: 'Vue'
     },
-    name: 'Gulu',
+    name: 'neko-ui-vue3',
     file: 'dist/lib/gulu.js',
     format: 'umd',
     plugins: [terser()]
-  },
+  }, {
+    name: 'neko-ui-vue3',
+    file: 'dist/lib/gulu.esm.js',
+    format: 'es',
+    plugins: [terser()]
+  }],
   plugins: [
     scss({ include: /\.scss$/, sass: dartSass }),
     esbuild({
@@ -26,4 +31,4 @@ export default {
       include: /\.vue$/,
     })
   ],
-} 
+}
