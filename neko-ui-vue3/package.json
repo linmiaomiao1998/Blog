@@ -1,11 +1,10 @@
 {
   "name": "neko-ui-vue3",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "files": [
     "dist/lib/*"
   ],
   "main": "dist/lib/neko.js",
-  "module": "dist/lib/neko.esm.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
