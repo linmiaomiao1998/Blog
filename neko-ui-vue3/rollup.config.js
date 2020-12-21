@@ -11,12 +11,12 @@ export default {
       vue: 'Vue'
     },
     name: 'neko-ui-vue3',
-    file: 'dist/lib/gulu.js',
+    file: 'dist/lib/neko.js',
     format: 'umd',
     plugins: [terser()]
   }, {
     name: 'neko-ui-vue3',
-    file: 'dist/lib/gulu.esm.js',
+    file: 'dist/lib/neko.esm.js',
     format: 'es',
     plugins: [terser()]
   }],

@@ -33,8 +33,8 @@ npm manifest:
     "files": [
       "dist/lib/*"
     ],
-    "main": "dist/lib/gulu.js",
-    "module": "dist/lib/gulu.esm.js",
+    "main": "dist/lib/neko.js",
+    "module": "dist/lib/neko.esm.js",
     "scripts": {
       "dev": "vite",
       "build": "vite build"
