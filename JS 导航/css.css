@@ -26,11 +26,35 @@ body{
     background-size:cover;
  
 }
+main>.wrapper>div:nth-child(1)>kbd:nth-child(14){
+    width: 75px;
+}
 main>.wrapper>div:nth-child(2){
-    margin-left:-10px;
+    margin-left: 18px;
+}
+main>.wrapper>div:nth-child(2)>kbd:nth-child(1){
+    width: 75px;
 }
 main>.wrapper>div:nth-child(3){
-    margin-left:-70px;
+    margin-left:18px;
+}
+main>.wrapper>div:nth-child(3)>kbd:nth-child(1){
+    width: 90px;
+}
+main>.wrapper>div:nth-child(3)>kbd:nth-child(13){
+    width: 100px;
+}
+main>.wrapper>div:nth-child(4)>kbd:nth-child(1),
+main>.wrapper>div:nth-child(4)>kbd:nth-child(12)
+{
+width: 127px;
+}
+main>.wrapper>div:nth-child(5)>kbd{
+    width: 63px;
+}
+main>.wrapper>div:nth-child(5)>kbd:nth-child(4){
+    white-space:pre;
+    width: 368px;
 }
 main>.wrapper
 {
